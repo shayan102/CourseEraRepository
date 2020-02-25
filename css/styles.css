@@ -38,3 +38,10 @@ body{
      background-color: #512DA8;
 }
 
+.card-header {
+    background-color: rgb(245, 177, 31);
+}
+
+.form-check {
+    margin-left: 10px;
+}
