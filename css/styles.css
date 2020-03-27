@@ -46,6 +46,10 @@ body{
     margin-left: 10px;
 }
 
+.form-check-input {
+        
+}
+
 .tab-content {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
