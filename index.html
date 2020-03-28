@@ -38,7 +38,7 @@
                 </ul>
 
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginbtn">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -93,9 +93,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="section" class="col-12 col-sm-2 control-label">Section</label>
-                            <div class="col-sm-4 has-feedback">
+                        <div class="form-group row">
+                            <label for="section" class=" col-12 col-md-2 control-label">Section</label>
+                            <div class="col-12 col-md-10">
                                 <div class="btn-group" id="section" data-toggle="buttons">
                                     <label class="btn btn-success active">
                                         <input type="radio" name="section" id="nonsmoking" autocomplete="off" checked>
@@ -108,28 +108,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="dateandtime" class="col-12 col-sm-2 form-label">Date and Time</label>
+                            <div class="col-6 col-sm-3">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="offset-md-2 col-md-10" style="margin-bottom: 15px;">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" type="submit">Reserve</button>
+                        </div>
+
+                    </form>
                 </div>
-
-
-                <div class="form-group row">
-                    <label for="dateandtime" class="col-12 col-sm-2 form-label">Date and Time</label>
-                    <div class="col-6 col-sm-3">
-                        <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                    </div>
-                    <div class="col-6 col-sm-3">
-                        <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                    </div>
-                </div>
-
-                <div class="offset-md-2 col-md-10" style="margin-bottom: 15px;">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <button class="btn btn-primary" type="submit">Reserve</button>
-                </div>
-
-                </form>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -185,7 +182,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning" data-toggle="modal" data-target="#TableReservation">Reserve
+                    <a class="btn btn-block btn-warning" id="reserveTable">Reserve
                         Table</a>
                 </div>
             </div>
@@ -252,64 +249,6 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
-                    <div class="media-body">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md">
-                <div class="media">
-                    <div class="media-body">
-
-                    </div>
-                    <div class="sm-order-last">
-                        <img src="img/buffet.png" class="d-flex img-thumbnail align-self-center" alt="Grand-Buffet">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png"
-                        alt="Alberto Somayya">
-                    <div class="media-body">
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-content">
-            <div class="card col-12 col-sm-8 offset-2" id="reserveTable">
-                <h3 class="card-header text-white">Reserve a Table</h3>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="footer">
@@ -365,23 +304,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#mycarousel").carousel({ interval: 2000 });
-            $("#carouselButton").click(function () {
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')) {
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
